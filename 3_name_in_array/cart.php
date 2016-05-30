@@ -99,10 +99,9 @@ for ($i = 0;$i < count($products);$i++)
 }
 
 if (isset( $_REQUEST['name'])) {
-   // echo print_r($_REQUEST);
-     array_multisort($_REQUEST['cost']) ; //Сортирует только цены, остальные колонки не изменяются!!!
-
-    for ($b = 0; $b < 3 /*count($_REQUEST)*/; $b++) { //массив содержит больше значений??, выдается ошибка, и появляется 7 пункт в таблице.
+// echo print_r($_REQUEST);
+     array_multisort($_REQUEST['cost'],SORT_ASC,$_REQUEST['name'],$_REQUEST['count'],$_REQUEST['action']) ; 
+    for ($b = 0; $b < count($_REQUEST['cost']); $b++) {
 
         $summaProduct_r = $_REQUEST['cost'][$b] * $_REQUEST['count'][$b] * (100 - $_REQUEST['action'][$b]) / 100;
        // print_r($summaProduct_r);
