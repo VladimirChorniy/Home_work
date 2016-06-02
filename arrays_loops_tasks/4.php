@@ -3,7 +3,5 @@ $arr = array('green'=>'зеленый', 'red'=>'красный','blue'=>'гол�
 
 foreach ($arr as $key => $vol){
     echo 'ключ '. $key.'<br>';
-}
-foreach ($arr as $vol){
     echo 'значение '. $vol.'<br>';
 }

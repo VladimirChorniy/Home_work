@@ -1,6 +1,7 @@
 <?php
-$arr = array("январь","февраль","март","апрель","май","июнь","июль","август","сентябрь","октябрь","ноябрь","декабрь");
-$month = "май";
+$arr = array("January","February","March","April","May","June","July","August","September","October","November","December");
+$month = date('F');
+
 foreach ($arr as $result) {
     if ($result == $month) {
          
